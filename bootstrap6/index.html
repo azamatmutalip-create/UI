@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Space — учись в своём ритме</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #f8f9fc; color: #20243b; }
+    .hero { background: #eef0ff; }
+    .brand-mark { width: 36px; height: 36px; display: inline-grid; place-items: center; background: #6155e8; color: white; border-radius: 10px; font-weight: bold; }
+    .feature-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 14px; font-size: 1.4rem; background: #eeecff; }
+    .card { border-color: #e8e9f1; }
+    .hero-art { background: #fff; border: 1px solid #e4e5f4; transform: rotate(2deg); }
+    .section-space { padding: 80px 0; }
+    .text-purple { color: #6155e8; }
+  </style>
+</head>
+<body>
+  <!-- Навигационная панель Bootstrap -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#"><span class="brand-mark">S</span> Study Space</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#about">О проекте</a></li>
+          <li class="nav-item"><a class="nav-link" href="#courses">Направления</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">Вопросы</a></li>
+          <li class="nav-item"><a class="btn btn-primary px-4" href="#start">Начать</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero py-5" id="about">
+      <div class="container py-lg-5">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="badge text-bg-primary rounded-pill mb-3">ТВОЁ МЕСТО ДЛЯ УЧЁБЫ</span>
+            <h1 class="display-4 fw-bold mb-3">Учись новому <span class="text-purple">в своём ритме</span></h1>
+            <p class="lead text-secondary mb-4">Небольшие шаги каждый день помогают достичь больших целей. Выбирай направление и начинай изучать что-то интересное.</p>
+            <div class="d-flex flex-wrap gap-2"><a class="btn btn-primary btn-lg" href="#courses">Выбрать направление →</a><a class="btn btn-outline-secondary btn-lg" href="#faq">Узнать больше</a></div>
+          </div>
+          <div class="col-lg-5 offset-lg-1">
+            <div class="hero-art rounded-4 p-4 p-md-5 shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-4"><span class="fw-semibold">Мой учебный план</span><span class="badge text-bg-success">В процессе</span></div>
+              <div class="d-flex gap-3 align-items-center mb-4"><div class="feature-icon">📚</div><div><strong>Время узнавать новое</strong><div class="text-secondary small">Каждый день — новый шаг</div></div></div>
+              <div class="d-flex justify-content-between small mb-2"><span>Прогресс недели</span><strong>75%</strong></div>
+              <div class="progress" role="progressbar" aria-label="Прогресс недели" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 75%"></div></div>
+              <div class="alert alert-primary mt-4 mb-0 small" role="alert">✨ Отличное начало! Продолжай в том же духе.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-space" id="courses">
+      <div class="container">
+        <div class="text-center mb-5"><span class="text-purple fw-semibold small">ВЫБИРАЙ И ИЗУЧАЙ</span><h2 class="fw-bold mt-2">Популярные направления</h2><p class="text-secondary">Начни с того, что тебе интересно.</p></div>
+        <div class="row g-4">
+          <div class="col-md-4"><div class="card h-100 shadow-sm"><div class="card-body p-4"><div class="feature-icon mb-4">💻</div><span class="badge text-bg-primary mb-2">Разработка</span><h3 class="h5 fw-bold">Веб-разработка</h3><p class="text-secondary">Изучай HTML, CSS и создавай свои первые страницы.</p><a href="#start" class="btn btn-outline-primary">Подробнее →</a></div></div></div>
+          <div class="col-md-4"><div class="card h-100 shadow-sm"><div class="card-body p-4"><div class="feature-icon mb-4">🎨</div><span class="badge text-bg-warning mb-2">Творчество</span><h3 class="h5 fw-bold">Дизайн интерфейсов</h3><p class="text-secondary">Узнай, как создавать удобные и красивые интерфейсы.</p><a href="#start" class="btn btn-outline-primary">Подробнее →</a></div></div></div>
+          <div class="col-md-4"><div class="card h-100 shadow-sm"><div class="card-body p-4"><div class="feature-icon mb-4">🌐</div><span class="badge text-bg-success mb-2">Технологии</span><h3 class="h5 fw-bold">Компьютерные сети</h3><p class="text-secondary">Разберись, как устройства подключаются друг к другу.</p><a href="#start" class="btn btn-outline-primary">Подробнее →</a></div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-5" id="faq"><div class="container"><div class="row g-5"><div class="col-lg-4"><span class="text-purple fw-semibold small">ПОЛЕЗНО ЗНАТЬ</span><h2 class="fw-bold mt-2">Частые вопросы</h2><p class="text-secondary">Всё, что нужно знать перед началом.</p></div><div class="col-lg-8">
+      <div class="accordion" id="questions">
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1" aria-expanded="true" aria-controls="answer1">С чего начать обучение?</button></h3><div id="answer1" class="accordion-collapse collapse show" data-bs-parent="#questions"><div class="accordion-body">Выбери интересующее направление и начни с основ. Главное — заниматься регулярно.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer2" aria-expanded="false" aria-controls="answer2">Нужен ли опыт?</button></h3><div id="answer2" class="accordion-collapse collapse" data-bs-parent="#questions"><div class="accordion-body">Нет, направления подходят для знакомства с темой с нуля.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer3" aria-expanded="false" aria-controls="answer3">Сколько времени уделять учёбе?</button></h3><div id="answer3" class="accordion-collapse collapse" data-bs-parent="#questions"><div class="accordion-body">Даже 20–30 минут в день помогут постепенно двигаться вперёд.</div></div></div>
+      </div>
+    </div></div></div></section>
+    <section class="container pb-5" id="start"><div class="bg-primary text-white rounded-4 p-4 p-md-5 text-center"><h2 class="fw-bold">Готов начать?</h2><p class="mb-4">Первый шаг к новым навыкам — прямо сейчас.</p><a href="#courses" class="btn btn-light btn-lg">Посмотреть направления</a></div></section>
+  </main>
+  <footer class="bg-white border-top py-4"><div class="container d-flex flex-wrap justify-content-between gap-2"><span class="fw-bold">Study Space</span><span class="text-secondary small">Учебный проект на Bootstrap 6</span></div></footer>
+  <!-- JavaScript Bootstrap из Quick Start -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+</body>
+</html>
