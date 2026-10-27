@@ -1,27 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Элементы интерфейса</title>
-<meta name="description" content="Примеры использования компонентов Material Web.">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-<script type="importmap">{"imports":{"@material/web/":"https://esm.run/@material/web@2.4.1/"}}</script>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>План поездки</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">{"imports":{"@material/web/":"https://esm.run/@material/web@2.4.1/"}}</script>
+  <script type="module" src="app.js"></script>
 </head>
 <body>
-<header><a class="logo" href="#">Material Design</a><md-outlined-button href="https://github.com/material-components/material-web" target="_blank">GitHub</md-outlined-button></header>
-<div class="layout"><aside aria-label="Разделы"><a class="active" href="#components">Все примеры</a><a href="#buttons">Кнопки</a><a href="#switches">Переключатели</a><a href="#fields">Поля ввода</a><a href="#selection">Выбор</a><a href="#navigation">Вкладки</a><a href="#feedback">Прогресс</a></aside>
-<main><section class="hero"><h1>Элементы интерфейса</h1><p>На странице собраны примеры элементов интерфейса. Их можно нажимать и менять настройки.</p><md-text-button href="https://github.com/material-components/material-web/blob/main/docs/quick-start.md" target="_blank">Инструкция по подключению</md-text-button><p id="loading" role="status">Загрузка компонентов…</p></section>
-<section id="components"><div class="section-head"><h2>Примеры</h2><span class="count">9 примеров</span></div><div class="grid">
-<article class="card" id="buttons" data-doc="button"><div class="card-top"><h3>Кнопки</h3></div><p>Обычная, контурная и текстовая кнопки.</p><div class="demo" data-example><md-filled-button id="save">Сохранить</md-filled-button><md-outlined-button id="more">Подробнее</md-outlined-button><md-text-button id="reset">Сбросить</md-text-button></div><div class="status" id="button-status" aria-live="polite">Нажми на любую кнопку</div></article>
-<article class="card" id="switches" data-doc="switch"><div class="card-top"><h3>Переключатели</h3></div><p>Включение и отключение настроек.</p><div class="demo" data-example><label class="row"><span>Тёмная тема<div class="hint">Светлое или тёмное оформление</div></span><md-switch id="theme" icons aria-label="Тёмная тема"></md-switch></label><label class="row"><span>Уведомления</span><md-switch id="notifications" selected aria-label="Уведомления"></md-switch></label></div><div class="status" id="notify-status" aria-live="polite">Уведомления включены</div></article>
-<article class="card" id="fields" data-doc="text-field"><div class="card-top"><h3>Поля ввода</h3></div><p>Поле с проверкой на пустой ввод.</p><div class="demo" data-example><md-outlined-text-field class="field" id="name" label="Твоё имя" placeholder="Введите имя" maxlength="40"></md-outlined-text-field><md-filled-button id="greet">Поздороваться</md-filled-button></div><div class="status" id="greeting" aria-live="polite">Введите имя и нажмите кнопку.</div></article>
-<article class="card" id="selection" data-doc="checkbox"><div class="card-top"><h3>Флажки</h3></div><p>Можно выбрать несколько пунктов.</p><div class="demo" data-example><label class="row"><span>Адаптивный дизайн</span><md-checkbox class="feature" checked aria-label="Адаптивный дизайн"></md-checkbox></label><label class="row"><span>Анимации переходов</span><md-checkbox class="feature" aria-label="Анимации переходов"></md-checkbox></label><label class="row"><span>Тёмная тема</span><md-checkbox class="feature" aria-label="Тёмная тема"></md-checkbox></label></div><div class="status" id="features" aria-live="polite">Выбрано: 1 из 3</div></article>
-<article class="card" data-doc="radio"><div class="card-top"><h3>Один вариант</h3></div><p>Можно выбрать только один вариант.</p><div class="demo" data-example><label class="radio-item"><md-radio name="device" value="Телефон" checked aria-label="Телефон"></md-radio>Телефон</label><label class="radio-item"><md-radio name="device" value="Планшет" aria-label="Планшет"></md-radio>Планшет</label><label class="radio-item"><md-radio name="device" value="Компьютер" aria-label="Компьютер"></md-radio>Компьютер</label></div><div class="status" id="device-status" aria-live="polite">Выбрано: Телефон</div></article>
-<article class="card" data-doc="slider"><div class="card-top"><h3>Слайдер</h3></div><p>Изменение размера текста ползунком.</p><div class="demo" data-example><div class="row"><span id="sample">Привет, Material!</span><span id="size-value">24 px</span></div><md-slider id="size" min="16" max="40" value="24" labeled aria-label="Размер текста"></md-slider></div><div class="status">Передвинь ползунок от 16 до 40 px</div></article>
-<article class="card" id="navigation" data-doc="tabs"><div class="card-top"><h3>Вкладки</h3></div><p>Каждая вкладка показывает свой текст.</p><div class="demo" data-example><md-tabs id="tabs" aria-label="О Material"><md-primary-tab>Дизайн</md-primary-tab><md-primary-tab>Код</md-primary-tab><md-primary-tab>Результат</md-primary-tab></md-tabs><div class="tab-panel" id="tab-panel" role="tabpanel">Material Design — система оформления интерфейсов от Google.</div></div></article>
-<article class="card" data-doc="dialog"><div class="card-top"><h3>Диалог</h3></div><p>Пример окна подтверждения.</p><div class="demo" data-example><md-filled-tonal-button id="open-dialog">Открыть окно</md-filled-tonal-button><md-dialog id="dialog"><div slot="headline">Подтверждение</div><div slot="content">Продолжить выполнение действия?</div><div slot="actions"><md-text-button id="close-dialog">Позже</md-text-button><md-filled-button id="confirm-dialog">Продолжить</md-filled-button></div></md-dialog></div><div class="status" id="dialog-status" aria-live="polite">Диалог ожидает открытия</div></article>
-<article class="card wide" id="feedback" data-doc="progress"><div class="card-top"><h3>Индикатор прогресса</h3></div><p>Пример заполнения индикатора от 0 до 100%.</p><div class="demo" data-example><div class="progress-demo"><div class="row"><span>Демонстрационная загрузка</span><span id="progress-value" aria-live="polite">0%</span></div><md-linear-progress id="progress" value="0" aria-label="Прогресс загрузки"></md-linear-progress><div><md-outlined-button id="start-progress">Начать загрузку</md-outlined-button></div></div></div></article>
-</div></section><section class="bottom"><div><h3>Документация</h3><p>Код и описание остальных компонентов есть на GitHub.</p></div><md-filled-button href="https://github.com/material-components/material-web/tree/main/docs/components" target="_blank">Список компонентов</md-filled-button></section><footer><span>Учебная работа · Material Design</span><span>Библиотека @material/web</span></footer></main></div><div class="toast" id="toast" role="status" hidden></div>
-<script type="module" src="./app.js"></script>
-</body></html>
+  <header><div class="wrap"><strong>ПЛАН ПОЕЗДКИ</strong><a href="https://github.com/material-components/material-web/tree/main/docs/components">Компоненты на GitHub ↗</a></div></header>
+  <main class="wrap">
+    <section class="intro"><p class="label">ПРАКТИЧЕСКАЯ РАБОТА · MATERIAL WEB</p><h1>Куда отправимся?</h1><p>Выберите варианты поездки и соберите небольшой план. В форме используются компоненты Material Design.</p></section>
+    <div class="columns">
+      <section class="panel"><h2>Детали поездки</h2>
+        <md-outlined-text-field id="destination" label="Город" placeholder="Например, Алматы"></md-outlined-text-field>
+        <h3>Транспорт</h3>
+        <div class="choice"><label><md-radio name="transport" value="поезд" checked></md-radio> Поезд</label><label><md-radio name="transport" value="самолёт"></md-radio> Самолёт</label><label><md-radio name="transport" value="автобус"></md-radio> Автобус</label></div>
+        <h3>Что взять с собой?</h3>
+        <div class="choice vertical"><label><md-checkbox value="документы" checked></md-checkbox> Документы</label><label><md-checkbox value="камеру"></md-checkbox> Камеру</label><label><md-checkbox value="книгу"></md-checkbox> Книгу</label></div>
+        <label class="switch-row">Напоминание о поездке <md-switch id="reminder" aria-label="Напоминание о поездке"></md-switch></label>
+        <div class="actions"><md-filled-button id="create">Составить план</md-filled-button><md-outlined-button id="clear">Очистить</md-outlined-button></div>
+      </section>
+      <aside><section class="panel summary"><p class="label">ВАШ ПЛАН</p><h2>Информация о поездке</h2><p id="result" aria-live="polite">Заполните форму и нажмите «Составить план».</p><md-divider></md-divider><p>Материалы для изучения:</p><a href="https://github.com/material-components/material-web/blob/main/docs/quick-start.md">Подключение Material Web ↗</a></section>
+      <section class="panel"><h2>О странице</h2><p>Здесь можно попробовать кнопку, поле ввода, переключатель, флажки и выбор одного варианта.</p><md-text-button id="dialog-open">Подробнее</md-text-button></section></aside>
+    </div>
+  </main>
+  <md-dialog id="info"><div slot="headline">О компонентах</div><div slot="content">Элементы подключены из библиотеки Material Web. Их поведение можно изменить с помощью JavaScript.</div><div slot="actions"><md-text-button id="close">Закрыть</md-text-button></div></md-dialog>
+  <footer class="wrap">Пример формы · Material Design 3</footer>
+</body>
+</html>
